@@ -2,7 +2,6 @@
 /**
  * main - Entry point
  * Description: 'a c statement in ubuntu via emacs'
- * @parameter: c with ubuntu
  * Return: Always 0 (Success)
  */
 int main(void)
