@@ -23,8 +23,9 @@ int main(void)
 			if ((i / 10) != 9 || (i % 10) != 8 || (j / 10) != 9 || (j % 10) != 9)
 			{
 				putchar(',');
+				putchar(' ');
 			}
-			putchar(' ');
+		
 
 		}
 	}
