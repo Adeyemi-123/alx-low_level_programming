@@ -3,8 +3,7 @@
 /**
  * print_to_98 - all natural numbers from n to 98
  * @n: working on n
- * @i: working with i also
- * Description: prints all natural numbers from n to 98, followed by a new line.
+ * Description: prints all natural numbers from n to 98
  * Return: void
  */
 
@@ -16,8 +15,8 @@ void print_to_98(int n)
 	{
 		for (i = n; i <= 98; i++)
 		{
-			_putchar('0' + i / 10);
-			_putchar('0' + i % 10);
+			_putchar('0' + i);
+			_putchar('0' + i);
 			if (i != 98)
 			{
 				_putchar(',');
@@ -30,8 +29,8 @@ void print_to_98(int n)
 	{
 		for (i = n; i >= 98; i--)
 		{
-			_putchar('0' + i / 10);
-			_putchar('0' + i % 10);
+			_putchar('0' + i);
+			_putchar('0' + i);
 			if (i != 98)
 			{
 				_putchar(',');
