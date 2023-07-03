@@ -6,6 +6,7 @@
  * @str: string to be converted
  * Description:  changes all lowercase
  * letters of a string to uppercase.
+ * Return: return str
  */
 
 char *string_toupper(char *str)
