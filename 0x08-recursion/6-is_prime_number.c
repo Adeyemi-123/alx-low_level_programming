@@ -1,22 +1,34 @@
 #include "main.h"
+#include <stdio.h>
+
+/**
+ * is_prime_number_helper - helper for this code
+ * @n: number
+ * @divisor: divisor being checked
+ *
+ * Return: return 1 or 0
+ */
+
+int is_prime_number_helper(int n, int divisor)
+{
+	if (n <= 1)
+		return (0);
+	if (divisor == 1)
+		return (1);
+	if (n % divisor == 0)
+		return (0);
+	else
+		return (is_prime_number_helper(n, divisor - 1));
+
+}
 
 /**
  * is_prime_number - identify if it is a prime number
  * @n: number
- * Return: return 1 or 0
+ * Return: 1 if number is prime otherwise 0
  */
 
 int is_prime_number(int n)
 {
-	int i;
-
-	if (n <= 1)
-		return (0);
-
-	for (i = 2; i * i <= n; i++)
-	{
-		if (n % i == 0)
-			return (0);
-	}
-	return (1);
+	return (is_prime_number_helper(n, n - 1));
 }
