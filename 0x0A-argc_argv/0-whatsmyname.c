@@ -3,7 +3,8 @@
 
 /**
  * main - Entry point
- *
+ * @argc: void
+ * @argv: The parameter for name
  * Return: Always 0
  */
 
