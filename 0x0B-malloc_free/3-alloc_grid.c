@@ -4,8 +4,8 @@
 /**
  * **alloc_grid - function that returns a pointer to a
  * 2 dimensional array of integers.
- * @width: row 
- * @heigth: column
+ * @width: row
+ * @height: column
  * Return: return NULL on failure
  */
 
