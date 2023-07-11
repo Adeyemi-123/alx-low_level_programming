@@ -19,13 +19,13 @@ char *str_concat(char *s1, char *s2)
 	{
 		s1 = "";
 	}
-	return (NULL);
+
 
 	if (s2 == NULL)
 	{
 		s2 = "";
 	}
-	return (NULL);
+
 
 
 	length1 = strlen(s1);
