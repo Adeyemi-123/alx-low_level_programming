@@ -10,9 +10,8 @@
 
 void *malloc_checked(unsigned int b)
 {
-
-
 	void *str = malloc(b);
+
 	if (str == NULL)
 	{
 		char *errormessage = "failed malloc\n";
