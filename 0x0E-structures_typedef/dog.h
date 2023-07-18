@@ -14,6 +14,18 @@
 
 struct dog
 {
+	char *name; /**< pointer to the name of the dog. */
+	float age; /**< age of the dog. */
+	char *owner; /**< pointer on the owner of the dog. */
+};
+
+#endif /* DOG_H */
+
+#ifndef DOG_H
+
+#define DOG_H
+struct dog
+{
 	char name[100]; /**< pointer to the name of the dog. */
 	float age; /**< age of the dog. */
 	char owner[100]; /**< pointer on the owner of the dog. */
