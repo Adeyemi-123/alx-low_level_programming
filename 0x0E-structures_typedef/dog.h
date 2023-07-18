@@ -18,6 +18,7 @@ struct dog
 	char *owner; /**< pointer on the owner of the dog. */
 };
 
+
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
 /**
@@ -39,4 +40,6 @@ typedef struct
 
 void print_dog(struct dog *d);
 
-#endif
+typedef struct dog dog_t; /**< defining dog_t as the new name for struct dog. */
+
+#endif /* DOG_H */
