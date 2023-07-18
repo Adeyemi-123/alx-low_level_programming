@@ -9,7 +9,6 @@
  * @name: a pointer to the name of the dog
  * @age: Age of the dog
  * @owner: A pointer to the owner of the dog
- * Return: void
  */
 
 struct dog
@@ -19,18 +18,25 @@ struct dog
 	char *owner; /**< pointer on the owner of the dog. */
 };
 
-#endif /* DOG_H */
-
-#ifndef DOG_H
-
-#define DOG_H
-struct dog
-{
-	char name[100]; /**< pointer to the name of the dog. */
-	float age; /**< age of the dog. */
-	char owner[100]; /**< pointer on the owner of the dog. */
-};
-
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
-#endif /* DOG_H */
+/**
+ * struct Dog - a typedef of struct dog
+ * Description: new type struct dog with the following elements:
+ * name, age, owner.
+ * @name: a pointer to the name of the dog
+ * @age: Age of the dog
+ * @owner: A pointer to the owner of the dog
+ *
+ */
+
+typedef struct
+{
+	char *name; /**< pointer to the name of the dog. */
+	char *owner; /**< age of the dog. */
+	float age; /**< pointer on the owner of the dog. */
+} Dog;
+
+void print_dog(struct dog *d);
+
+#endif
