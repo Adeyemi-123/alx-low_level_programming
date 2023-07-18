@@ -42,4 +42,6 @@ void print_dog(struct dog *d);
 
 typedef struct dog dog_t; /**< defining dog_t as the new name for struct dog. */
 
+dog_t *new_dog(char *name, float age, char *owner);
+
 #endif /* DOG_H */
