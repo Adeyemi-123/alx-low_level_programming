@@ -28,6 +28,7 @@ char *argstostr(int ac, char **av)
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
+	str[0] = '\0';
 
 	for (i = 0; i < ac; i++)
 	{
@@ -35,6 +36,4 @@ char *argstostr(int ac, char **av)
 		strcat(str, "\n");
 	}
 	return (str);
-
-	free(str);
 }
