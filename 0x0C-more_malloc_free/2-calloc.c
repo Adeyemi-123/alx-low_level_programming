@@ -19,9 +19,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	totalsize = nmemb * size;
 
-	ptr = (int *)malloc((totalsize + 1) * sizeof(int));
+	ptr = (int *)malloc((totalsize) * sizeof(int));
 	if (ptr == NULL)
 		return (NULL);
 
+	memset(ptr, 0, totalsize);
 	return (ptr);
 }
