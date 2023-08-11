@@ -14,8 +14,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int len1;
 	unsigned int len2;
-	int total;
-	char *str;
+	size_t total;
+	void *str;
 	size_t real_len2;
 
 	if (s1 == NULL)
@@ -29,12 +29,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	total = len1 + len2 + 1;
 
 	real_len2 = (n >= len2) ? len2 : n;
-	str = (char *)malloc(total * sizeof(char));
+	str = malloc(total);
 	if (str == NULL)
 		return (NULL);
 
-	memcpy(str, s1, len1);
-	memcpy(str + len1, s2, real_len2);
+	strcpy(str, s1);
+	strncat(str, s2, real_len2);
 
 	return (str);
 	free(str);
