@@ -37,6 +37,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	strncat(str, s2, real_len2);
 
 	return (str);
-	free(str);
-
 }
