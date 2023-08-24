@@ -1,37 +1,38 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
 
-int helper_palindrome(char *s, int n)
+/**
+ * is_palindrome_helper - function that decide the main function
+ * @start: start of length
+ * @end: end of length
+ * Return: return function
+ */
+
+bool is_palindrome_helper(char *start, char *end)
 {
-	n = 1;
-	
-	if (*s == '\0')
+	if (start >= end)
 	{
-		return (0);
+		return (true);
+	}
+	if (*start != *end)
+	{
+		return (false);
 	}
 
-	return n + helper_palindrome(s + 1);
+	return (is_palindrome_helper(start + 1, end - 1));
 }
 
-int helper1_palindrome(int b, int h)
-{
-
-	b = 0;
-	h = n - 1;
-
-	if (b == h)
-	{
-		return(1);
-	}
-	return helper_palindrome(s, n);
-}
+/**
+ * is_palindrome - function that returns 1 if a string
+ * @s: pointer of function
+ * Return: returns main function
+ */
 
 int is_palindrome(char *s)
 {
-	if (*s == 0)
-	{
-		return (1);
-	}
+	int length = strlen(s);
 
-	return helper1_palindrome(b, h);
+	return (is_palindrome_helper(s, s + length - 1));
 }
