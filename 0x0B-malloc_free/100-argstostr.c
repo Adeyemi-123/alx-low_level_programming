@@ -1,39 +1,47 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "main.h"
 
 /**
- * argstostr - function that concatenates all the arguments
- * @ac: size of pointer av
- * @av: pointer that contains all the argumenr
- * Return: returns pointer
+ * argstostr - function that splits a string into words.
+ * @ac: size of av
+ * @av: pointer of the function
+ * Return: returns result
  */
 
 char *argstostr(int ac, char **av)
 {
-	char *str;
-	int i;
-	int len;
+	int total_length, current_position, i;
+	char *result;
 
 	if (ac == 0 || av == NULL)
-		return (NULL);
-
-	len = 0;
-
-	for (i = 0; i < ac; i++)
 	{
-		len += strlen(av[i]);
+		return (NULL);
 	}
 
-	str = (char *)malloc((len + 1) * sizeof(char));
-	if (str == NULL)
-		return (NULL);
-	str[0] = '\0';
-
+	total_length = 0;
 	for (i = 0; i < ac; i++)
 	{
-		strcat(str, av[i]);
-		strcat(str, "\n");
+		total_length += strlen(av[i]) + 1;
 	}
-	return (str);
+
+	result = (char *)malloc(total_length + 1);
+	if (result == NULL)
+	{
+		return (NULL);
+	}
+
+	current_position = 0;
+	for (i = 0; i < ac; i++)
+	{
+		strcpy(result + current_position, av[i]);
+		current_position += strlen(av[i]);
+		result[current_position] = '\n';
+		current_position++;
+	}
+
+		result[total_length] = '\0';
+
+	return (result);
 }
