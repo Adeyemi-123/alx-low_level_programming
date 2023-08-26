@@ -20,7 +20,7 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			printf("[%u] %s\n" (unsigned int)count, h->str);
+			printf("[%u] %s\n", (unsigned int)count, h->str);
 		}
 		h = h->next;
 		count++;
