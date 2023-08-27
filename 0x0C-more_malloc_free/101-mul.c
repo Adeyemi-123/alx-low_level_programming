@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include "main.h"
-
+#include <string.h>
 
 char *multiplyStrings(char *num1, char *num2)
 {
