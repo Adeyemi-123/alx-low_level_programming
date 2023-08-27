@@ -12,7 +12,8 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	void *new_node, *current;
+	void *new_node;
+	list_t *current;
 
 	if (str == NULL)
 	{
