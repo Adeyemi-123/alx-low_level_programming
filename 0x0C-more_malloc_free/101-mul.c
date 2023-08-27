@@ -30,7 +30,6 @@ char *multiplyStrings(char *num1, char *num2)
 		}
 		result[i] += carry;
 	}
-
 	return (result);
 }
 
@@ -40,8 +39,7 @@ char *multiplyStrings(char *num1, char *num2)
  * Return: returns (1);
  */
 
-
-int isNumeric(const char *str) 
+int isNumeric(const char *str)
 {
 	while (*str)
 	{
@@ -83,7 +81,6 @@ int main(int argc, char *argv[])
 	{
 		num2++;
 	}
-
 	if (*num1 == '\0' || *num2 == '\0')
 	{
 		printf("0\n");
