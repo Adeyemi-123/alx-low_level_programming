@@ -4,6 +4,13 @@
 #include "main.h"
 #include <string.h>
 
+/**
+ * multiplyStrings - A good number of strings
+ * @num1: first number
+ * @num2: second number
+ * Return: returns result
+ */
+
 char *multiplyStrings(char *num1, char *num2)
 {
 	int len1 = strlen(num1);
@@ -27,6 +34,12 @@ char *multiplyStrings(char *num1, char *num2)
 	return (result);
 }
 
+/**
+ * isNumeric - One of the functions to solve this given task
+ * @str: pointer to the string
+ * Return: returns (1);
+ */
+
 
 int isNumeric(const char *str) 
 {
@@ -41,40 +54,47 @@ int isNumeric(const char *str)
 	return (1);
 }
 
+/**
+ * main - Entry point
+ * @argc: size of of argv
+ * @argv: pointer to member variables
+ * Return: Always (0) Success
+ */
+
 int main(int argc, char *argv[])
 {
-        char *num1;
-        char *num2, *result;
+	char *num1;
+	char *num2, *result;
 
-        if (argc != 3 || !isNumeric(argv[1]) || !isNumeric(argv[2]))
-        {
-                printf("Error\n");
-                return (98);
-        }
+	if (argc != 3 || !isNumeric(argv[1]) || !isNumeric(argv[2]))
+	{
+		printf("Error\n");
+		return (98);
+	}
 
-        num1 = argv[1];
-        num2 = argv[2];
+	num1 = argv[1];
+	num2 = argv[2];
 
-        while (*num1 == '0' && *(num1 + 1) != '\0')
-        {
-                num1++;
-        }
-        while (*num2 == '0' && *(num2 + 1) != '\0')
-        {
-                num2++;
-        }
+	while (*num1 == '0' && *(num1 + 1) != '\0')
+	{
+		num1++;
+	}
+	while (*num2 == '0' && *(num2 + 1) != '\0')
+	{
+		num2++;
+	}
 
-        if (*num1 == '\0' || *num2 == '\0')
-        {
-                printf("0\n");
-                return (0);
-        }
+	if (*num1 == '\0' || *num2 == '\0')
+	{
+		printf("0\n");
+		return (0);
+	}
 
-        result = multiplyStrings(num1, num2);
+	result = multiplyStrings(num1, num2);
 
-        printf("%s\n", result);
+	printf("%s\n", result);
 
-        free(result);
+	free(result);
 
 	return (0);
 }
