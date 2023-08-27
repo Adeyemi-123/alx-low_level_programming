@@ -24,7 +24,8 @@ char *multiplyStrings(char *num1, char *num2)
 		carry = 0;
 		for (j = len2 - 1; j >= 0; j--)
 		{
-			product = (num1[i] - '0') * (num2[j] - '0') + carry + result[i + j + 1] - '0';
+			product = (num1[i] - '0') * (num2[j] - '0') +
+					carry + result[i + j + 1] - '0';
 			carry = product / 10;
 			result[i + j + 1] = (product % 10) + '0';
 		}
