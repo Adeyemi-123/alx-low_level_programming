@@ -10,6 +10,8 @@
 
 int main(int argc, char *argv[])
 {
+	int i;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -26,7 +28,7 @@ int main(int argc, char *argv[])
 
 	unsigned char *main_ptr = (unsigned char *)main;
 
-	for (int i = 0; i < num_bytes; i++)
+	for (i = 0; i < num_bytes; i++)
 	{
 		printf("%02x", main_ptr[i]);
 
