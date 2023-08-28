@@ -21,10 +21,10 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			printf("[%lu] %s\n", count, h->str);
+			printf("[%d] %s\n", count, h->str);
 		}
-		count++;
 		h = h->next;
+		count++;
 	 }
 	return (count);
 }
