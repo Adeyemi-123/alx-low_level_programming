@@ -30,7 +30,7 @@ void print_name_as_is(char *name)
 }
 
 /**
- * print_name_uppercase - prints name in uppercase
+ * print_name_uppercase1 - prints name in uppercase
  * @name: name to be printed
  */
 
