@@ -34,7 +34,7 @@ void print_name_as_is(char *name)
  * @name: name to be printed
  */
 
-void print_name_uppercase(char *name)
+void print_name_uppercase1(char *name)
 {
 	char *prefix = "Hello, my uppercase name is ";
 	int i = 0;
