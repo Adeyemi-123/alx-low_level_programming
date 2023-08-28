@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - Entry point
+ * @argc: size of array of pointer argv
+ * @argv: Array of pointer containing members
+ * Return: Always (0) success
+ */
+
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
