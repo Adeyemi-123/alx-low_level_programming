@@ -1,9 +1,8 @@
-#include <stddef.h>
 
 #ifndef FUNCTION_POINTERS_H
 
 #define FUNCTION_POINTERS_H
-
+#include <stddef.h>
 int _putchar(char c);
 void print_name_as_is(char *name);
 void print_name_uppercase1(char *name);
