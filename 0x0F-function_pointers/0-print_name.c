@@ -46,6 +46,7 @@ void print_name_uppercase1(char *name)
 	}
 
 	i = 0;
+
 	while (name[i])
 	{
 		char uppercase_char = name[i];
@@ -54,6 +55,7 @@ void print_name_uppercase1(char *name)
 		{
 			uppercase_char += 'A' - 'a';
 		}
+
 		write(1, &uppercase_char, 1);
 		i++;
 	}
