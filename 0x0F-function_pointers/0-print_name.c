@@ -49,6 +49,7 @@ void print_name_uppercase1(char *name)
 	while (name[i])
 	{
 		char uppercase_char = name[i];
+
 		if (uppercase_char >= 'a' && uppercase_char <= 'z')
 		{
 			uppercase_char += 'A' - 'a';
