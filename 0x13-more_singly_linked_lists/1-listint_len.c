@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <stddef.h>
-#include <stdio.h>
 
 /**
  * listint_len - function that returns the number
