@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stddef.h>
-#include <lists.h>
+#include "lists.h"
 
 /**
  * print_listint - function that rints all the elements
