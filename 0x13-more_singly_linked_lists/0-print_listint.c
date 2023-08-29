@@ -12,7 +12,7 @@ size_t print_listint(const listint_t *h)
 {
 	size_t size = 0;
 
-	while (h->str != NULL)
+	while (h != NULL)
 	{
 		if (h->str != NULL)
 			printf("[%d] %s", h->len, h->str);
