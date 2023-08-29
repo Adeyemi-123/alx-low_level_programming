@@ -6,6 +6,7 @@
  * print_listint - function that rints all the elements
  * of a listint_t list
  * @h: pointer to the nodes
+ * Return: return size of nodes
  */
 
 size_t print_listint(const listint_t *h)
@@ -18,6 +19,6 @@ size_t print_listint(const listint_t *h)
 		h = h->next;
 		size++;
 	}
-	
+
 	return (size);
 }
